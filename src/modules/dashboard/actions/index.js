@@ -1,11 +1,11 @@
 import * as types from "../actions/types";
 
-export const getSampleAction = (params) => ({
-  type: types.GET_SAMPLE_LIST,
+export const getCapsuleListAction = (params) => ({
+  type: types.GET_CAPSULE_LIST,
   ...params,
 });
 
-export const setSampleAction = (data) => ({
-  type: types.SET_SAMPLE_LIST,
+export const setCapsuleListAction = (data) => ({
+  type: types.SET_CAPSULE_LIST,
   data,
 });

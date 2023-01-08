@@ -1,2 +1,2 @@
-export const GET_SAMPLE_LIST = "GET_SAMPLE_LIST";
-export const SET_SAMPLE_LIST = "SET_SAMPLE_LIST";
+export const GET_CAPSULE_LIST = "GET_CAPSULE_LIST";
+export const SET_CAPSULE_LIST = "SET_CAPSULE_LIST";

@@ -1,12 +1,11 @@
 import api from "../../../api";
 import { convertObjectToQuerystring } from "../../../utils/helper";
 
-export const getSampleApi = (filters, data) => {
+export const getCapsuleDataApi = (filters) => {
   return api(
-    `${process.env.URL}/v3/launches?${convertObjectToQuerystring(filters)}`,
-    {
-      method: "get",
-      body: JSON.stringify(data),
-    }
+    `${process.env.REACT_APP_API_URL}/v3/capsules?${convertObjectToQuerystring(
+      filters
+    )}`,
+    { method: "get" }
   );
 };

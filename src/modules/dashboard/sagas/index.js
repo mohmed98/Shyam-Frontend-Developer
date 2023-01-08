@@ -3,10 +3,10 @@ import * as actions from "../actions";
 import * as types from "../actions/types";
 import * as apiMethods from "../api";
 
-function* getSampleListSaga({ data, filters, resolve, reject }) {
+function* getCapsuleListSaga({ filters, resolve, reject }) {
   try {
-    const response = yield call(apiMethods.getSampleApi, filters, data);
-    yield put(actions.setSampleAction(response));
+    const response = yield call(apiMethods.getCapsuleDataApi, filters);
+    yield put(actions.setCapsuleListAction(response));
     resolve(response);
   } catch (err) {
     reject(err);
@@ -14,7 +14,7 @@ function* getSampleListSaga({ data, filters, resolve, reject }) {
 }
 
 export function* watchDashboard() {
-  yield takeEvery(types.GET_SAMPLE_LIST, getSampleListSaga);
+  yield takeEvery(types.GET_CAPSULE_LIST, getCapsuleListSaga);
 }
 
 export default function* dashboardSaga() {

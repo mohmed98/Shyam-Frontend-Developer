@@ -2,15 +2,15 @@
 import * as types from "../actions/types";
 
 const initialState = {
-  sampleList: {},
+  capsuleList: [],
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case types.SET_SAMPLE_LIST:
+    case types.SET_CAPSULE_LIST:
       return {
         ...state,
-        sampleList: action.data,
+        capsuleList: action.data,
       };
 
     default:
