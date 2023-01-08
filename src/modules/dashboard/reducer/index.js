@@ -10,7 +10,7 @@ export default (state = initialState, action) => {
     case types.SET_CAPSULE_LIST:
       return {
         ...state,
-        capsuleList: action.data,
+        capsuleList: [...state.capsuleList, ...action.data],
       };
 
     default:

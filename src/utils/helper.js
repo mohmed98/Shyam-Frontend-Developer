@@ -11,3 +11,8 @@ export const chunk = (array, size) => {
 
   return [head, ...chunk(tail, size)];
 };
+
+export const getDate = (date) => {
+  const dateObj = new Date(date);
+  return `${dateObj.getDate()}-${dateObj.getMonth()}-${dateObj.getFullYear()}`;
+};
