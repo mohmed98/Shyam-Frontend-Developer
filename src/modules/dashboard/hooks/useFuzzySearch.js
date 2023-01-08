@@ -10,14 +10,17 @@ const useFuzzySearch = ({ items, onSearch }) => {
 
   const setSearchedValue = useCallback(
     (inputVal) => {
-      if (!inputVal) return;
+      if (!inputVal) {
+        onSearch(items);
+        return;
+      }
       const searchedItems = items.filter((data) => {
         return (
           data.status.toLowerCase().includes(inputVal.toLowerCase().trim()) ||
           data.type.toLowerCase().includes(inputVal.toLowerCase().trim())
         );
       });
-      onSearch(String(inputVal).trim() ? searchedItems : items);
+      onSearch(searchedItems);
     },
     [items, onSearch]
   );

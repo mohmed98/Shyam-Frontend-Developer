@@ -29,7 +29,7 @@ const DashboardView = ({
           dataLength={capsuleList.length}
           next={() => getCapsulesListFun(pageSize)}
           loader={<Loader />}
-          hasMore={true}
+          hasMore={!inputValue}
         >
           <div className="mb-24">
             <CapsulesList list={capsuleList} />
